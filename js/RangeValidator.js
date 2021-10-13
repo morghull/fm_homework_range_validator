@@ -23,4 +23,7 @@ class RangeValidator {
       throw new RangeError('"to" must be greter then "from"!');
     this._to = to;
   }
+  get getRange() {
+    return [this.from, this.to];
+  }
 }
