@@ -27,6 +27,8 @@ class RangeValidator {
     return [this.from, this.to];
   }
   validate(number) {
+    if (typeof number !== 'number')
+      throw new TypeError('number for validation must be a number!');
     if (number > this.to || number < this.from)
       throw new RangeError(
         `${number} is not in a range ${this.getRange}!`
