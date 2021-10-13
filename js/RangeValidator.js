@@ -26,4 +26,11 @@ class RangeValidator {
   get getRange() {
     return [this.from, this.to];
   }
+  validate(number) {
+    if (number > this.to || number < this.from)
+      throw new RangeError(
+        `${number} is not in a range ${this.getRange}!`
+      );
+    return number;
+  }
 }
