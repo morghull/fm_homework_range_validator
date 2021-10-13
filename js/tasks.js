@@ -21,3 +21,4 @@ try {
 
 const validRValidator = new RangeValidator(12, 25);
 console.log('%c%s', validStyle, 'RangeValidator', validRValidator);
+console.log('%c%s', validStyle, 'Range', validRValidator.getRange);
